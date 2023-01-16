@@ -7,9 +7,9 @@ In a Spring Boot project, you can configure Buildpacks in your `build.gradle` fi
 
 ```shell
 tasks.named('bootBuildImage') {
-	if (System.getProperty( "os.arch" ).toLowerCase().startsWith('aarch')) {
-		builder = "ghcr.io/thomasvitale/java-builder-arm64"
-	}
-  builder = "paketobuildpacks/builder:tiny"
+    if (System.getProperty( "os.arch" ).toLowerCase().startsWith('aarch')) {
+	builder = "ghcr.io/thomasvitale/java-builder-arm64"
+    }
+    builder = "paketobuildpacks/builder:tiny"
 }
 ```
